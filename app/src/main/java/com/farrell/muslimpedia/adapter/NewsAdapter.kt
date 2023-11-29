@@ -1,13 +1,11 @@
 package com.farrell.muslimpedia.adapter
 
 import android.content.Intent
-import android.provider.ContactsContract.Data
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.farrell.muslimpedia.R
 import com.farrell.muslimpedia.data.model.ArticlesItem
-import com.farrell.muslimpedia.data.model.NewsResponse
 import com.farrell.muslimpedia.databinding.ItemRowNewsBinding
 import com.farrell.muslimpedia.ui.details.DetailNewsActivity
 import com.squareup.picasso.Picasso
@@ -53,7 +51,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
                 .load(dataNews.urlToImage)
                 .fit()
                 .centerInside()
-                .placeholder(R.drawable.ic_logo)
+                .placeholder(R.drawable.logo_app)
                 .into(imgNews)
         }
 
