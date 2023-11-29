@@ -4,9 +4,7 @@ import android.app.SearchManager
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.ContextMenu
 import android.view.Menu
-import android.widget.SearchView
 import com.farrell.muslimpedia.adapter.SectionPagerAdapter
 import com.farrell.muslimpedia.databinding.ActivityMainBinding
 import com.google.android.material.tabs.TabLayoutMediator
@@ -27,10 +25,10 @@ class MainActivity : AppCompatActivity() {
         binding.vpNews.adapter = SectionPagerAdapter(this)
 
         val tabsList = arrayOf(
-            "Common,",
-            "About Quran",
+            "Local News",
+            "Asia News",
             "Al Jazeera",
-            "Warning For Muslim"
+            "Worldwide News"
         )
         TabLayoutMediator(binding.tabs,binding.vpNews){tab, page ->
             tab.text = tabsList[page]
